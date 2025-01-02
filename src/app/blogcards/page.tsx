@@ -27,7 +27,7 @@ const BakeryShowcase = () => {
 
   return (
     // Main Container
-    <div className="py-16 px-8 bg-black text-white " id="products">
+    <div className="py-16 px-8 bg-black text-white pt-52 " id="products">
       {/* Heading Section */}
       <div className="mb-12 text-center">
         <h2 className="text-4xl font-bold mb-4">Our Delicious Products</h2>
