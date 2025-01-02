@@ -6,7 +6,7 @@ import { client } from '@/sanity/lib/client';
 import { createComment } from '@/services/api';
 function Route2cards() {
 
-   const [comments, setComments] = useState<any[]>([]);
+   const [comments, setComments] = useState<{ name: string; comment: string }[]>([]);
       const [newComment, setNewComment] = useState('');
       const [name, setName] = useState('');
       const [loading, setLoading] = useState(false);
@@ -27,7 +27,7 @@ function Route2cards() {
         fetchComments();
       }, [loading]);
     
-      const handleSubmit = async (e:any) => {
+      const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!newComment || !name) {
           alert('Please fill in all fields.');
@@ -45,6 +45,7 @@ function Route2cards() {
           setError('');
     
           const createdComment = await createComment(commentData)
+          console.log('createdComment:', createdComment);
     
           setNewComment('');
           setName('');
@@ -67,7 +68,7 @@ function Route2cards() {
           </h1>
           <Image  src={'/card2.png'} alt="Oatmeal Chocolate Chip Cookies" width={500} height={400} className="rounded-lg object-cover" />
             <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            If you're a fan of homemade  chocolate bread, this recipe is for you to try. This is a delicious yeasted chocolate loaf, that is not too sweet and has a deep chocolate flavor.
+            If you are a fan of homemade  chocolate bread, this recipe is for you to try. This is a delicious yeasted chocolate loaf, that is not too sweet and has a deep chocolate flavor.
 
 A generous amount of good quality unsweetened cocoa powder and chocolate chips makes this loaf beautifully rich. The fantastic loaf does not need anything to taste delicious, just eat on its own. Not only that, this is a great recipe for beginner bread bakers, no complicated step to follow.
 
@@ -93,8 +94,8 @@ TB  =  tablespoon
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
             The cookies are from{" "}
             <strong>The Frog Commissary Cookbook</strong>, a book of the recipes from a very popular local restaurant
-            called "Frog" in Philadelphia in the 1970s. My mother started making these cookies, and, after a time, so
-            did I. This cookie became the signature item at the restaurant, flying out the door much like McDonald's
+            called Frog in Philadelphia in the 1970s. My mother started making these cookies, and, after a time, so
+            did I. This cookie became the signature item at the restaurant, flying out the door much like McDonalds
             sells burgers!
           </p>
         </div>
@@ -113,7 +114,7 @@ TB  =  tablespoon
             <li>1 tsp baking soda</li>
             <li>1 tsp baking powder</li>
             <li>1 tsp salt</li>
-            <li>2 1/2 cups oats (rolled or "quick," but not "instant")</li>
+            <li>2 1/2 cups oats (rolled or quick, but not instant)</li>
             <li>2 cups chocolate chips (about 12-oz.)</li>
           </ul>
         </div>

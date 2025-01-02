@@ -1,12 +1,23 @@
 
 'use client'
+
+
+
+
+
+
+
+
+
+
 import Image from 'next/image';
 import { client } from '@/sanity/lib/client'; // Ensure this is correctly set up
 import React, { useState, useEffect } from 'react';
 import { createComment } from '@/services/api';
 
+
 const RouteCake1 = () => {
-  const [comments, setComments] = useState<any[]>([]);
+  const [comments, setComments] = useState<{ name: string; comment: string }[]>([]);
   const [newComment, setNewComment] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
@@ -27,7 +38,7 @@ const RouteCake1 = () => {
     fetchComments();
   }, [loading]);
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newComment || !name) {
       alert('Please fill in all fields.');
@@ -45,6 +56,7 @@ const RouteCake1 = () => {
       setError('');
 
       const createdComment = await createComment(commentData)
+      console.log('createdComment:', createdComment);
 
       setNewComment('');
       setName('');
@@ -135,7 +147,7 @@ const RouteCake1 = () => {
 
         {/* Supplies Section */}
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Supplies You'll Need</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4">Supplies You will Need</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>Layer Cake, recipe of choice</li>
             <li>Buttercream</li>

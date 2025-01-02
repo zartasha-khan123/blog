@@ -14,28 +14,28 @@ const BakeryFeatures = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
         <div className="flex flex-col items-center text-center">
           <div className="mb-4">
-            <img src="/pro1.svg" alt="Super yummy" className="h-16 w-16" />
+            <Image src="/pro1.svg" alt="Super yummy" className="h-16 w-16" />
           </div>
           <h3 className="text-xl font-semibold mb-2">Super yummy</h3>
           <p>Our bakery and handcrafted pastries are of the highest quality. Come and enjoy.</p>
         </div>
         <div className="flex flex-col items-center text-center">
           <div className="mb-4">
-            <img src="/pro2.svg" alt="Fresh product" className="h-16 w-16" />
+            <Image src="/pro2.svg" alt="Fresh product" className="h-16 w-16" />
           </div>
           <h3 className="text-xl font-semibold mb-2">Fresh product</h3>
           <p>Our bakery and handcrafted pastries are of the highest quality. Come and enjoy.</p>
         </div>
         <div className="flex flex-col items-center text-center">
           <div className="mb-4">
-            <img src="/pro3.svg" alt="No preservatives" className="h-16 w-16" />
+            <Image src="/pro3.svg" alt="No preservatives" className="h-16 w-16" />
           </div>
           <h3 className="text-xl font-semibold mb-2">No preservatives</h3>
           <p>Our bakery and handcrafted pastries are of the highest quality. Come and enjoy.</p>
         </div>
         <div className="flex flex-col items-center text-center">
           <div className="mb-4">
-            <img src="/pro4.svg" alt="100% Organic" className="h-16 w-16" />
+            <Image src="/pro4.svg" alt="100% Organic" className="h-16 w-16" />
           </div>
           <h3 className="text-xl font-semibold mb-2">100% Organic</h3>
           <p>Our bakery and handcrafted pastries are of the highest quality. Come and enjoy.</p>

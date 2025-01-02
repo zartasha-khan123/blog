@@ -4,9 +4,9 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { client } from '@/sanity/lib/client';
 import { createComment } from '@/services/api';
-function cards4() {
+function Cards4() {
 
-  const [comments, setComments] = useState<any[]>([]);
+  const [comments, setComments] = useState<{ name: string; comment: string }[]>([]);
       const [newComment, setNewComment] = useState('');
       const [name, setName] = useState('');
       const [loading, setLoading] = useState(false);
@@ -27,7 +27,7 @@ function cards4() {
         fetchComments();
       }, [loading]);
     
-      const handleSubmit = async (e:any) => {
+      const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (!newComment || !name) {
           alert('Please fill in all fields.');
@@ -45,6 +45,7 @@ function cards4() {
           setError('');
     
           const createdComment = await createComment(commentData)
+          console.log('createdComment:', createdComment);
     
           setNewComment('');
           setName('');
@@ -193,4 +194,4 @@ Take a big vessel and place all dry ingredients in it.
   )
 }
 
-export default cards4
+export default Cards4

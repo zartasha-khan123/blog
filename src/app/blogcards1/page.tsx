@@ -9,7 +9,7 @@ import ProfileCard from "./[_id1]/page";
 
 
 function Route2cards() {
-  const [comments, setComments] = useState<any[]>([]);
+  const [comments, setComments] = useState<{ name: string; comment: string }[]>([]);
   const [newComment, setNewComment] = useState("");
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
@@ -30,7 +30,7 @@ function Route2cards() {
     fetchComments();
   }, [loading]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newComment || !name) {
       alert("Please fill in all fields.");
@@ -48,6 +48,7 @@ function Route2cards() {
       setError("");
 
       const createdComment = await createComment(commentData);
+      console.log("createdComment:", createdComment);
 
       setNewComment("");
       setName("");
@@ -90,8 +91,8 @@ function Route2cards() {
           <p className="text-lg text-gray-700 leading-relaxed mt-4">
              The cookies are from{" "}
             <strong>The Frog Commissary Cookbook</strong>, a book of the recipes from a very popular local restaurant
-            called "Frog" in Philadelphia in the 1970s. My mother started making these cookies, and, after a time, so
-             did I. This cookie became the signature item at the restaurant, flying out the door much like McDonald's
+            called Frog in Philadelphia in the 1970s. My mother started making these cookies, and, after a time, so
+             did I. This cookie became the signature item at the restaurant, flying out the door much like McDonalds
            sells burgers!
           </p>
           </div>
@@ -108,8 +109,9 @@ function Route2cards() {
          <li>2 tsp vanilla extract</li>
              <li>2 cups all-purpose flour</li>
            <li>1 tsp baking soda</li>
-            <li>1 tsp baking powder</li>            <li>1 tsp salt</li>
-            <li>2 1/2 cups oats (rolled or "quick," but not "instant")</li>
+            <li>1 tsp baking powder</li>           
+             <li>1 tsp salt</li>
+            <li>2 1/2 cups oats (rolled or quick, but not instant)</li>
             <li>2 cups chocolate chips (about 12-oz.)</li>
 
 
@@ -131,7 +133,7 @@ function Route2cards() {
                Drop 1-inch balls of dough onto the cookie sheet, placing about 1 1/2 inches apart so they have room to
               spread.
            </li>
-            <li>Bake at 350°F for 10-13 minutes, until golden brown at the edges and light golden at the center.</li>
+            <li>Bake at 350 F for 10-13 minutes, until golden brown at the edges and light golden at the center.</li>
             <li>Cool on the baking sheet for at least 1-2 minutes before transferring to a wire rack to cool completely.</li>
           </ol>
             </ul>
