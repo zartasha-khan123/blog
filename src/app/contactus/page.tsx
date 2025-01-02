@@ -50,7 +50,7 @@ export default function ContactForm() {
   <div className="flex items-center gap-6">
     {/* Text Section */}
     <div>
-      <h1 className="text-8xl font-bold">Contact us</h1>
+      <h1 className="text-8xl font-bold text-orange-600">Contact us</h1>
       <p className="text-gray-400 text-lg max-w-lg">
         Our bakery and handcrafted pastries are of the highest quality. Come and enjoy our organic bakery items.
       </p>
@@ -84,12 +84,12 @@ export default function ContactForm() {
     
               {/* Content Section */}
               <div className="space-y-12">
-                <h1 className="text-5xl font-bold tracking-tight">Visit our shop</h1>
+                <h1 className="text-5xl font-bold tracking-tight text-orange-600">Visit our shop</h1>
     
                 {/* California Location */}
                 <div className="space-y-4">
                   <h2 className="text-2xl font-semibold">PM, California</h2>
-                  <div className="space-y-2 text-gray-300">
+                  <div className="space-y-2 text-gray-400">
                     <p className="flex items-center gap-2">
                       <MapPin className="h-5 w-5" />
                       <span>6987 ImnerAve, Minesia</span>
@@ -105,7 +105,7 @@ export default function ContactForm() {
                 {/* New York Location */}
                 <div className="space-y-4">
                   <h2 className="text-2xl font-semibold">YC, New York</h2>
-                  <div className="space-y-2 text-gray-300">
+                  <div className="space-y-2 text-gray-400">
                     <p className="flex items-center gap-2">
                       <MapPin className="h-5 w-5" />
                       <span>6987 ImnerAve, Minesia</span>
@@ -148,7 +148,7 @@ export default function ContactForm() {
 <div className="min-h-screen bg-black p-4 md:p-8">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="text-white space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-orange-600">
             Contact us & submit your feedback
           </h1>
           <p className="text-gray-400 text-lg">
@@ -171,14 +171,14 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <Card className="p-6 bg-[#BEB19B] border-0">
+        <Card className="p-6 bg-[#916b2e] border-0">
           <form onSubmit={handleSubmit} className="space-y-4">
             
             
           
             <Input
               placeholder="Enter your name"
-              className="bg-transparent border-0 placeholder:text-gray-700 text-black h-12"
+              className="bg-transparent border-0 placeholder:text-gray-900 text-black h-12"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -186,21 +186,21 @@ export default function ContactForm() {
             <Input
               type="email"
               placeholder="Enter your email"
-              className="bg-transparent border-0 placeholder:text-gray-700 text-black h-12"
+              className="bg-transparent border-0 placeholder:text-gray-900 text-black h-12"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
             <Textarea
               placeholder="Write your message..."
-              className="bg-transparent border-0 placeholder:text-gray-700 text-black min-h-[160px] resize-none"
+              className="bg-transparent border-0 placeholder:text-gray-900 text-black min-h-[160px] resize-none"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
             />
             <Button 
               type="submit"
-              className={`w-full bg-black text-white hover:bg-gray-900 h-12 text-lg ${
+              className={`w-full text-orange-400 hover:bg-gray-500 h-12 text-lg ${
                 "opacity-50 cursor-not-allowed"
               }`}
              
