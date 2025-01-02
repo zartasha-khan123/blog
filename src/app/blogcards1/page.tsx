@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import { createComment } from "@/services/api";
-import ProfileCard from "./[_id1]/page";
 
 
 function Route2cards() {
@@ -177,12 +176,8 @@ function Route2cards() {
           </div>
         </div>
 
-        {/* Sidebar with Profile Card */}
-        <div className="col-span-1 mt-12">
-          <ProfileCard />
-        </div>
       </div>
-    </div>
+      </div>
   );
 }
 

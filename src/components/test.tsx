@@ -2,6 +2,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Link } from "lucide-react"
 import Image from "next/image"
+// import ProfileCard from "./[_id1]/page";
 
 export default function ProfileCard() {
   return (
@@ -84,3 +85,13 @@ export default function ProfileCard() {
   )
 }
 
+
+
+
+//    {/* Sidebar with Profile Card */}
+//         <div className="col-span-1 mt-12">
+//           <ProfileCard />
+//         </div>
+//       </div>
+//     </div>
+//   );
