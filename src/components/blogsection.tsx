@@ -721,10 +721,10 @@ function ProfileCard() {
           {/* Contact Links */}
           <div className="space-y-2">
             <h3 className="font-medium">Contact me</h3>
-            <Link href="https://blog-4xmp.vercel.app/" className="text-blue-600 hover:underline block">
+            <Link href="#" className="text-blue-600 hover:underline block">
               My Web Page
             </Link>
-            <Link href="www.gmail.com" className="text-blue-600 hover:underline block">
+            <Link href="#" className="text-blue-600 hover:underline block">
               Report Abuse
             </Link>
           </div>
