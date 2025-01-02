@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative min-h-screen bg-black mt-10">
       {/* Background texture */}
       <div className="absolute inset-0 bg-[url('/texture.png')] opacity-10" />
       
