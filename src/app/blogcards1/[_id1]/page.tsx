@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Link } from "lucide-react"
 import Image from "next/image"
@@ -31,9 +32,9 @@ export default function ProfileCard() {
           {/* My Blogs Section */}
           <div className="space-y-2">
             <h2 className="text-xl font-medium">My blogs</h2>
-            <a href="#" className="text-blue-600 hover:underline block">
+            <Link href="#" className="text-blue-600 hover:underline block">
               bakingsheet
-            </a>
+            </Link>
           </div>
 
           {/* About Me Section */}
@@ -70,12 +71,12 @@ export default function ProfileCard() {
           {/* Contact Links */}
           <div className="space-y-2">
             <h3 className="font-medium">Contact me</h3>
-            <a href="#" className="text-blue-600 hover:underline block">
+            <Link href="#" className="text-blue-600 hover:underline block">
               My Web Page
-            </a>
-            <a href="#" className="text-blue-600 hover:underline block">
+            </Link>
+            <Link href="#" className="text-blue-600 hover:underline block">
               Report Abuse
-            </a>
+            </Link>
           </div>
         </CardContent>
       </Card>

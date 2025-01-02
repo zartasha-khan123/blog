@@ -1,7 +1,7 @@
 
   
-
-export default {
+const cardSection =
+ {
     title: 'card section',
     name: 'cardsection',
     type: 'object',
@@ -25,3 +25,5 @@ export default {
       }
     ]
   }
+
+export default cardSection;
