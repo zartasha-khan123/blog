@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Link } from "lucide-react"
 import Image from "next/image"
 
 export default function ProfileCard() {
@@ -21,9 +22,9 @@ export default function ProfileCard() {
               />
             </div>
             <div className="text-center">
-              <a href="/" className="text-blue-600 hover:underline text-sm">
-                View Full Size
-              </a>
+              <Link href="/blogcards" className="text-blue-600 hover:underline text-sm">
+                View Full Size and Details
+              </Link>
             </div>
           </div>
 
